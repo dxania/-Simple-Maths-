@@ -33,34 +33,10 @@
 </template>
 
 <script>
-// import SignIn from './SignIn.vue';
 
 export default {
   name: "Register",
 
-  //   components: {
-  //       SignIn
-  //   },
-
-  //   data() {
-  //       return {
-  //           showRegisterContainer: true,
-  //           showSignInContainer: false
-  //       }
-  //   },
-
-  //   methods: {
-  //       toggleRegisterContainer() {
-  //           this.showSignInContainer = true;
-  //           this.showRegisterContainer = false;
-  //       }
-  //   }
-
-  //   watch: {
-  //       showSignInContainer(){
-
-  //       }
-  //   }
 };
 </script>
 

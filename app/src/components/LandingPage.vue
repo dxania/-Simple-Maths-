@@ -1,52 +1,44 @@
 <template>
   <div class="hello">
-    <h1>Simple <span>Maths</span> </h1>
-    <p>
-      Factorial | Squareroot | Multiples
-    </p>
-    <Register v-if="showRegisterContainer" @toggle-auth="toggleAuthContainer"/>
-    <SignIn v-if="showSignInContainer" @toggle-auth="toggleAuthContainer"/>
+    <h1>Simple <span>Maths</span></h1>
+    <p>Factorial | Squareroot | Multiples</p>
+    <Register v-if="showRegisterContainer" @toggle-auth="toggleAuthContainer" />
+    <SignIn v-if="showSignInContainer" @toggle-auth="toggleAuthContainer" />
   </div>
 </template>
 
 <script>
-import Register from './Register.vue';
-import SignIn from './SignIn.vue';
+import Register from "./Register.vue";
+import SignIn from "./SignIn.vue";
 
 export default {
-  name: 'LandingPage',
+  name: "LandingPage",
 
   components: {
     Register,
-    SignIn
+    SignIn,
   },
 
   data() {
-      return {
-          showRegisterContainer: true,
-          showSignInContainer: false
-      }
+    return {
+      showRegisterContainer: false,
+      showSignInContainer: true,
+    };
   },
 
   methods: {
-      toggleAuthContainer() {
-          this.showSignInContainer = !this.showSignInContainer;
-          this.showRegisterContainer = !this.showRegisterContainer;
-      }
-  }
-  // props: {
-  //   msg: String
-  // }
-
-}
+    toggleAuthContainer() {
+      this.showSignInContainer = !this.showSignInContainer;
+      this.showRegisterContainer = !this.showRegisterContainer;
+    },
+  },
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
 h1 span {
   font-style: italic;
-    font-weight: normal;
+  font-weight: normal;
 }
 h3 {
   margin: 40px 0 0;

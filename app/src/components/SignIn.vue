@@ -9,8 +9,7 @@
         id="password"
         placeholder="Password"
       />
-      <input type="submit" value="Sign In" />
-      <!-- <a href="" target="_blank" rel="noopener">Sign Up</a> -->
+      <input type="submit" value="Sign In" @click="redirectToCalculator" />
       <input
         type="submit"
         value="Sign Up"
@@ -25,27 +24,19 @@
 export default {
   name: "SignIn",
 
-  //   data() {
-  //       return {
-  //           showRegisterContainer: true,
-  //           showSignInContainer: false
-  //       }
-  //   },
-
-  //   methods: {
-  //       toggleAuthContainer() {
-  //           this.showSignInContainer = true;
-  //           this.showRegisterContainer = false;
-  //       }
-  //   }
+  methods: {
+    redirectToCalculator() {
+      this.$router.replace({
+        name: "Calculator",
+      });
+    },
+  },
 };
 </script>
 
 <style scoped>
 .container {
   border: 1px solid;
-  /* display: flex;
-    justify-content: space-evenly; */
   margin: 0 auto;
   width: 30%;
   height: 400px;
